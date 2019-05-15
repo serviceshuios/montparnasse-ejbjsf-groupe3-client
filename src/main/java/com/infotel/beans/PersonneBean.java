@@ -58,8 +58,8 @@ import com.infotel.metier.Personne;
 		public void modifierPersonne() {
 			service.modifierPersonne(personne);
 		}
-		public void supprimerPersonne(Personne p) {
-			service.supprimerPersonne(p);
+		public void supprimerPersonne() {
+			service.supprimerPersonne(personne);
 		}
 		public Personne getPersonne(Long idPersonne) {
 			return service.getPersonne(idPersonne);
