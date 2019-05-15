@@ -55,8 +55,8 @@ import com.infotel.metier.Personne;
 		public List<Personne> findAllPersonne() {
 			return service.findAllPersonne();
 		}
-		public void modifierPersonne(Personne p) {
-			service.modifierPersonne(p);
+		public void modifierPersonne() {
+			service.modifierPersonne(personne);
 		}
 		public void supprimerPersonne(Personne p) {
 			service.supprimerPersonne(p);
