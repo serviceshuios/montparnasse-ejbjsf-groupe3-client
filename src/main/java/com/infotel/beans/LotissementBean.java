@@ -49,29 +49,10 @@ import com.infotel.metier.Personne;
 
 		// Méthodes
 		
-		public void ajouterPersonne(Personne p) {
-			service.ajouterPersonne(p);
-		}
-		public List<Personne> findAllPersonne() {
-			return service.findAllPersonne();
-		}
-		public void modifierPersonne(Personne p) {
-			service.modifierPersonne(p);
-		}
-		public void supprimerPersonne(Personne p) {
-			service.supprimerPersonne(p);
-		}
-		public Personne getPersonne(Long idPersonne) {
-			return service.getPersonne(idPersonne);
-		}
-		public Personne affichagePersonne(Long idPersonne) {
-			return service.affichagePersonne(idPersonne);
-		}
 		
 		
-		
-		public void ajouterLotissement(Lotissement l) {
-			service.ajouterLotissement(l);
+		public void ajouterLotissement() {
+			service.ajouterLotissement(lotissement);
 		}
 		public List<Lotissement> findAllLotissement() {
 			return service.findAllLotissement();
