@@ -44,7 +44,6 @@ import com.infotel.metier.Lotissement;
 			return serialVersionUID;
 		}
 		
-		
-		
+
 		// Méthodes
 }
