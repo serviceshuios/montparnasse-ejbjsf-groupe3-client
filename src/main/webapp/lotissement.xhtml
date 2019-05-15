@@ -17,23 +17,24 @@
 		
 			<input type="hidden" name="idLot" value="${idLot}" />
 			
-			
-			<h:outputLabel value="Numero du Lotissement" />
+			<h:outputLabel value="NumLot" />
 			<h:inputText id="numLot" value="#{lotissementBean.lotissement.numLot}" />
 			
-			<h:outputLabel value="Adresse" />
+			<h:outputLabel value="AdresseLot" />
 			<h:inputText id="adresseLot" value="#{lotissementBean.lotissement.adresseLot}" />
 			
-			<h:outputLabel value="Date de creation" />
+			<h:outputLabel value="DateCreation" />
 			<h:inputText id="dateCreation" value="#{lotissementBean.lotissement.dateCreation}" />
 			
 			<h:outputLabel value="Prix" />
 			<h:inputText id="prix" value="#{lotissementBean.lotissement.prix}" />
+
 			
-		
 		</h:panelGrid>
 		
 		<h:commandButton action="#{lotissementBean.ajouterLotissement}" value="ajouter" />
+		
+		<h:commandButton action="#{lotissementBean.modifierLotissement}" value="modifier" />
 		
 		<div>
 		
