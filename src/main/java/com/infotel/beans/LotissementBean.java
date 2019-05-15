@@ -57,11 +57,11 @@ import com.infotel.metier.Personne;
 		public List<Lotissement> findAllLotissement() {
 			return service.findAllLotissement();
 		}
-		public void modifierLotissement(Lotissement l) {
-			service.modifierLotissement(l);
+		public void modifierLotissement() {
+			service.modifierLotissement(lotissement);
 		}
-		public void supprimerLotissement(Lotissement l) {
-			service.supprimerLotissement(l);
+		public void supprimerLotissement() {
+			service.supprimerLotissement(lotissement);
 		}
 		public Lotissement getLotissement(Long idLot) {
 			return service.getLotissement(idLot);
