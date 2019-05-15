@@ -49,8 +49,8 @@ import com.infotel.metier.Personne;
 		}
 		// Méthodes
 		
-		public void ajouterPersonne(Personne p) {
-			service.ajouterPersonne(p);
+		public void ajouterPersonne() {
+			service.ajouterPersonne(personne);
 		}
 		public List<Personne> findAllPersonne() {
 			return service.findAllPersonne();
