@@ -15,25 +15,25 @@
 	<h:form>
 		<h:panelGrid columns="1" cellpadding="5">
 		
-			<h:outputLabel value="idLot" />
-			<h:inputText id="idLot" value="#{lotissementBean.lotissement.idLot}" />
+			<input type="hidden" name="idLot" value="${idLot}" />
 			
-			<h:outputLabel value="numLot" />
+			
+			<h:outputLabel value="Numero du Lotissement" />
 			<h:inputText id="numLot" value="#{lotissementBean.lotissement.numLot}" />
 			
-			<h:outputLabel value="adresseLot" />
+			<h:outputLabel value="Adresse" />
 			<h:inputText id="adresseLot" value="#{lotissementBean.lotissement.adresseLot}" />
 			
-			<h:outputLabel value="dateCreation" />
+			<h:outputLabel value="Date de creation" />
 			<h:inputText id="dateCreation" value="#{lotissementBean.lotissement.dateCreation}" />
 			
-			<h:outputLabel value="prix" />
+			<h:outputLabel value="Prix" />
 			<h:inputText id="prix" value="#{lotissementBean.lotissement.prix}" />
 			
 		
 		</h:panelGrid>
 		
-		<h:commandButton action="#{lotissementBean.ajouterPersonne}" value="ajouter" />
+		<h:commandButton action="#{lotissementBean.ajouterLotissement}" value="ajouter" />
 		
 		<div>
 		
