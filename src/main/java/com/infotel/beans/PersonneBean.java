@@ -70,27 +70,6 @@ import com.infotel.metier.Personne;
 		
 		
 		
-		public void ajouterLotissement(Lotissement l) {
-			service.ajouterLotissement(l);
-		}
-		public List<Lotissement> findAllLotissement() {
-			return service.findAllLotissement();
-		}
-		public void modifierLotissement(Lotissement l) {
-			service.modifierLotissement(l);
-		}
-		public void supprimerLotissement(Lotissement l) {
-			service.supprimerLotissement(l);
-		}
-		public Lotissement getLotissement(Long idLot) {
-			return service.getLotissement(idLot);
-		}
-		public Lotissement affichageLotissement(Long idLot) {
-			return service.affichageLotissement(idLot);
-		}
-		
-		
-		
 		public void acheterLotissement(Personne p, Lotissement l) {
 			service.acheterLotissement(p, l);
 		}
