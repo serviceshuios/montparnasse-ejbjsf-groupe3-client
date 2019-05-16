@@ -7,7 +7,7 @@ import javax.ejb.EJB;
 import javax.enterprise.context.SessionScoped;
 import javax.inject.Named;
 
-import com.infotel.ejb.ILotissementRemote;
+import com.infotel.ejb.IPersonneRemote;
 import com.infotel.metier.Lotissement;
 import com.infotel.metier.Personne;
 
@@ -21,14 +21,14 @@ import com.infotel.metier.Personne;
 		private static final long serialVersionUID = 1L;
 		// Attributs
 		@EJB
-		private ILotissementRemote service;
+		private IPersonneRemote service;
 		private Lotissement lotissement= new Lotissement();
 		private List<Lotissement> lotissements;
 		
-		public ILotissementRemote getService() {
+		public IPersonneRemote getService() {
 			return service;
 		}
-		public void setService(ILotissementRemote service) {
+		public void setService(IPersonneRemote service) {
 			this.service = service;
 		}
 		public Lotissement getLotissement() {
