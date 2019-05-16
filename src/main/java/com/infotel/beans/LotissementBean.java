@@ -73,7 +73,8 @@ import com.infotel.metier.Personne;
 		}
 		
 
-		public void acheterLotissement(idPersonne, idLot) {
+		public void acheterLotissement(Long idPersonne,Long idLot) {
 			service.acheterLotissement(p.getIdPersonne, l.getIdLot);
 		}
+	}
 
