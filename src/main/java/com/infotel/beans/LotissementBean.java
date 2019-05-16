@@ -72,9 +72,8 @@ import com.infotel.metier.Personne;
 			return service.affichageLotissement(idLot);
 		}
 		
-		
-		
-		public void acheterLotissement(Personne p, Lotissement l) {
-			service.acheterLotissement(p, l);
+
+		public void acheterLotissement(idPersonne, idLot) {
+			service.acheterLotissement(p.getIdPersonne, l.getIdLot);
 		}
-}
+
