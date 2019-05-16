@@ -4,55 +4,30 @@
 	xmlns:f="http://java.sun.com/jsf/core">
 <h:head>
 	<meta charset="UTF-8" />
-	<title>Insert title here</title>
+	<title>Achat d'un lotissement</title>
 	<h:outputStylesheet library="css" name="style.css" />
 	<h:outputStylesheet library="css" name="bootstrap.css" />
 </h:head>
 <body>
 <div>
-	<f:form modelAttribute="personne" method="POST" action="seMarier">
-		<table>
-			<tr>
-			<td>
-			
-			Personne  : <br/>
-				<select name="idPersonne">
-					<optgroup>
-						<option value="0">....</option>
-						<h:if test="${! empty Personne}">
-							<h:forEach items="${Personne}" var="p">
-								<option value="${p.idPersonne}">
-									<h:out value="${p.nom}, ${p.prenom}, ${p.age}">
-									</h:out></option>
-							</h:forEach>
-						</h:if>
-					</optgroup>
-				</select>
-				</td>
-				</tr>
-			</table>
+	<h:form>
+		<h2>Qui êtes-vous ?</h2>
+		<h:outputLabel value="Personne" />
+            <h:selectOneMenu value="#{personneBean.personne}">
+                <f:selectItem itemValue="0" itemLabel="Attribuez une personne"/>
+                <f:selectItems value="#{personneBean.findAllPersonne()}" var="p" itemValue="#{p.idPersonne}" itemLabel="#{p.nom},#{p.prenom},#{p.age}"/>
+            </h:selectOneMenu><br/>
+            <h2>Choisissez votre lotissement de rêve</h2>
+            <h:outputLabel value="Lotissement" />
+            <h:selectOneMenu value="#{lotissmentBean.lotissement}">
+                <f:selectItem itemValue="0" itemLabel="Choisissez un lotissement"/>
+                <f:selectItems value="#{lotissementBean.findAllLotissement()}" var="l" itemValue="#{l.idLot}" itemLabel="#{l.numLot},#{l.adresseLot},#{l.dateCreation},#{l.prix}"/>
+            </h:selectOneMenu><br/>
 			
 			<table>
-			<tr>
-			<td>
-			
-			Lotissement  : <br/>
-				<select name="idLot">
-					<optgroup>
-						<option value="0">....</option>
-						<h:if test="${! empty Lotissement}">
-							<h:forEach items="${Lotissement}" var="l">
-								<option value="${l.idLot}">
-									<h:out value="${l.numLot}, ${l.adresseLot}, ${l.dateCreation}, ${prix}">
-									</h:out></option>
-							</h:forEach>
-						</h:if>
-					</optgroup>
-				</select>
-				</td>
-				</tr>
+			<h:commandButton action="#{lotissementBean.acheterLotissement}" value="Acheter" />
 			</table>
-	</f:form>
+	</h:form>
 </div>
 </body>
 </html>

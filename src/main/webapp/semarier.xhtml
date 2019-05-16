@@ -1,60 +1,34 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:h="http://java.sun.com/jsf/html"
-	xmlns:f="http://java.sun.com/jsf/core">
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:c="http://java.sun.com/jstl/core">
 <h:head>
 	<meta charset="UTF-8" />
-	<title>Insert title here</title>
+	<title>Page de rencontre</title>
 	<h:outputStylesheet library="css" name="style.css" />
 	<h:outputStylesheet library="css" name="bootstrap.css" />
 </h:head>
 <body>
 <div>
-	<f:form modelAttribute="personne" method="POST" action="seMarier">
-		<table>
-			<tr>
-			<td>
-			
-			Personne P1 : <br/>
-				<select name="idPersonne">
-					<optgroup>
-						<option value="0">....</option>
-						<h:if test="${! empty Personne}">
-							<h:forEach items="${Personne}" var="p1">
-								<option value="${p1.idPersonne}">
-									<h:out value="${p1.nom}, ${p1.prenom}, ${p1.age}">
-									</h:out></option>
-							</h:forEach>
-						</h:if>
-					</optgroup>
-				</select>
-				</td>
-				</tr>
-			</table>
+	<h:form>
+		<h2>Qui êtes-vous ?</h2>
+		<h:outputLabel value="Personne" />
+            <h:selectOneMenu value="#{personneBean.personne}">
+                <f:selectItem itemValue="0" itemLabel="Attribuez une personne"/>
+                <f:selectItems value="#{personneBean.findAllPersonne()}" var="p1" itemValue="#{p1.idPersonne}" itemLabel="#{p1.nom},#{p1.prenom},#{p1.age}"/>
+            </h:selectOneMenu><br/>
+            <h2>Choisissez votre âme soeur</h2>
+            <h:outputLabel value="Personne" />
+            <h:selectOneMenu value="#{personneBean.personne}">
+                <f:selectItem itemValue="0" itemLabel="Attribuez une personne"/>
+                <f:selectItems value="#{personneBean.findAllPersonne()}" var="p2" itemValue="#{p2.idPersonne}" itemLabel="#{p2.nom},#{p2.prenom},#{p2.age}"/>
+            </h:selectOneMenu><br/>
 			
 			<table>
-			<tr>
-			<td>
-			
-			Personne P2 : <br/>
-				<select name="idPersonne">
-					<optgroup>
-						<option value="0">....</option>
-						<h:if test="${! empty Personne}">
-							<h:forEach items="${Personne}" var="p2">
-								<option value="${p2.idPersonne}">
-									<h:out value="${p2.nom}, ${p2.prenom}, ${p2.age}">
-									</h:out></option>
-							</h:forEach>
-						</h:if>
-					</optgroup>
-				</select>
-				</td>
-				</tr>
-				<tr> <td><input type="submit" value="Se Marier" /></td> </tr>
-			
+			<h:commandButton action="#{personneBean.seMarier}" value="Se marier" />
 			</table>
-	</f:form>
+	</h:form>
 
 </div>
 </body>
