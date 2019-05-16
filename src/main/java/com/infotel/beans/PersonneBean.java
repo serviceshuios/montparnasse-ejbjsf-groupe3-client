@@ -68,11 +68,7 @@ import com.infotel.metier.Personne;
 			return service.affichagePersonne(idPersonne);
 		}
 		
-		
-		
-		public void acheterLotissement(Personne p, Lotissement l) {
-			service.acheterLotissement(p, l);
-		}
+			
 		public void seMarier (Long idPersonne1, Long idPersonne2) {
 			service.seMarier(idPersonne1, idPersonne2);
 		}
