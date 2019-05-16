@@ -19,7 +19,7 @@
             </h:selectOneMenu><br/>
             <h2>Choisissez votre lotissement de rêve</h2>
             <h:outputLabel value="Lotissement" />
-            <h:selectOneMenu value="#{lotissmentBean.lotissement}">
+            <h:selectOneMenu value="#{lotissementBean.lotissement}">
                 <f:selectItem itemValue="0" itemLabel="Choisissez un lotissement"/>
                 <f:selectItems value="#{lotissementBean.findAllLotissement()}" var="l" itemValue="#{l.idLot}" itemLabel="#{l.numLot},#{l.adresseLot},#{l.dateCreation},#{l.prix}"/>
             </h:selectOneMenu><br/>
