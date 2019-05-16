@@ -80,7 +80,7 @@ import com.infotel.metier.Personne;
 		}
 		
 
-		public void acheterLotissement(Long idPersonne,Long idLot) {
+		public void acheterLotissement() {
 			service.acheterLotissement(personne.getIdPersonne(), lotissement.getIdLot());
 		}
 	}
