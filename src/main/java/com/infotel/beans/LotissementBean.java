@@ -24,6 +24,7 @@ import com.infotel.metier.Personne;
 		private ILotissementRemote service;
 		private Lotissement lotissement= new Lotissement();
 		private List<Lotissement> lotissements;
+		
 		public ILotissementRemote getService() {
 			return service;
 		}
@@ -53,6 +54,7 @@ import com.infotel.metier.Personne;
 		
 		public void ajouterLotissement() {
 			service.ajouterLotissement(lotissement);
+			
 		}
 		public List<Lotissement> findAllLotissement() {
 			return service.findAllLotissement();
