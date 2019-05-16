@@ -8,3 +8,51 @@
 	<h:outputStylesheet library="css" name="style.css" />
 	<h:outputStylesheet library="css" name="bootstrap.css" />
 </h:head>
+<body>
+<div>
+	<f:form modelAttribute="personne" method="POST" action="seMarier">
+		<table>
+			<tr>
+			<td>
+			
+			Personne  : <br/>
+				<select name="idPersonne">
+					<optgroup>
+						<option value="0">....</option>
+						<h:if test="${! empty Personne}">
+							<h:forEach items="${Personne}" var="p">
+								<option value="${p.idPersonne}">
+									<h:out value="${p.nom}, ${p.prenom}, ${p.age}">
+									</h:out></option>
+							</h:forEach>
+						</h:if>
+					</optgroup>
+				</select>
+				</td>
+				</tr>
+			</table>
+			
+			<table>
+			<tr>
+			<td>
+			
+			Lotissement  : <br/>
+				<select name="idLot">
+					<optgroup>
+						<option value="0">....</option>
+						<h:if test="${! empty Lotissement}">
+							<h:forEach items="${Lotissement}" var="l">
+								<option value="${l.idLot}">
+									<h:out value="${l.numLot}, ${l.adresseLot}, ${l.dateCreation}, ${prix}">
+									</h:out></option>
+							</h:forEach>
+						</h:if>
+					</optgroup>
+				</select>
+				</td>
+				</tr>
+			</table>
+	</f:form>
+</div>
+</body>
+</html>
