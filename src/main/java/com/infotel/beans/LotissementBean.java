@@ -61,6 +61,7 @@ import com.infotel.metier.Personne;
 		}
 		public void ajouterLotissement() {
 			service.ajouterLotissement(lotissement);
+			lotissement = new Lotissement();
 			
 		}
 		public List<Lotissement> findAllLotissement() {
@@ -68,6 +69,7 @@ import com.infotel.metier.Personne;
 		}
 		public void modifierLotissement() {
 			service.modifierLotissement(lotissement);
+			lotissement = new Lotissement();
 		}
 		public void supprimerLotissement(Long idLot) {
 			service.supprimerLotissement(idLot);

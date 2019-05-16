@@ -51,12 +51,14 @@ import com.infotel.metier.Personne;
 		
 		public void ajouterPersonne() {
 			service.ajouterPersonne(personne);
+			personne = new Personne();
 		}
 		public List<Personne> findAllPersonne() {
 			return service.findAllPersonne();
 		}
 		public void modifierPersonne() {
 			service.modifierPersonne(personne);
+			personne = new Personne();
 		}
 		public void supprimerPersonne(Long idPersonne) {
 			service.supprimerPersonne(idPersonne);
