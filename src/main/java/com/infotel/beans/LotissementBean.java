@@ -62,8 +62,8 @@ import com.infotel.metier.Personne;
 		public void modifierLotissement() {
 			service.modifierLotissement(lotissement);
 		}
-		public void supprimerLotissement() {
-			service.supprimerLotissement(lotissement);
+		public void supprimerLotissement(Long idLot) {
+			service.supprimerLotissement(idLot);
 		}
 		public Lotissement getLotissement(Long idLot) {
 			return service.getLotissement(idLot);
