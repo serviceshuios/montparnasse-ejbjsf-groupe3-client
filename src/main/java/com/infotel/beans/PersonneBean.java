@@ -69,9 +69,10 @@ import com.infotel.metier.Personne;
 		}
 		
 			
-		public void seMarier (Long idPersonne1, Long idPersonne2) {
-			service.seMarier(idPersonne1, idPersonne2);
+		public void seMarier () {
+			service.seMarier(personne.getIdPersonne(), personne.getIdPersonne());
 		}
+		
 		
 	}
 
