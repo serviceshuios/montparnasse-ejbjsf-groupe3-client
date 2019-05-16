@@ -23,6 +23,7 @@ import com.infotel.metier.Personne;
 		@EJB
 		private IPersonneRemote service;
 		private Lotissement lotissement= new Lotissement();
+		private Personne personne= new Personne();
 		private List<Lotissement> lotissements;
 		
 		public IPersonneRemote getService() {
@@ -46,12 +47,18 @@ import com.infotel.metier.Personne;
 		public static long getSerialversionuid() {
 			return serialVersionUID;
 		}
-		
+		public Personne getPersonne() {
+			return personne;
+		}
+		public void setPersonne(Personne personne) {
+			this.personne = personne;
 
 		// Méthodes
 		
 		
 		
+		
+		}
 		public void ajouterLotissement() {
 			service.ajouterLotissement(lotissement);
 			
@@ -74,7 +81,7 @@ import com.infotel.metier.Personne;
 		
 
 		public void acheterLotissement(Long idPersonne,Long idLot) {
-			service.acheterLotissement(p.getIdPersonne, l.getIdLot);
+			service.acheterLotissement(personne.getIdPersonne(), lotissement.getIdLot());
 		}
 	}
 
