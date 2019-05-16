@@ -23,6 +23,7 @@ import com.infotel.metier.Personne;
 		@EJB
 		private IPersonneRemote service;
 		private Personne personne= new Personne();
+		private Personne personne2= new Personne();
 		private List<Personne> personnes;
 		
 		
@@ -47,7 +48,15 @@ import com.infotel.metier.Personne;
 		public static long getSerialversionuid() {
 			return serialVersionUID;
 		}
+		public Personne getPersonne2() {
+			return personne2;
+		}
+		public void setPersonne2(Personne personne2) {
+			this.personne2 = personne2;
+		}
+		
 		// Méthodes
+		
 		
 		public void ajouterPersonne() {
 			service.ajouterPersonne(personne);
@@ -72,7 +81,8 @@ import com.infotel.metier.Personne;
 		
 			
 		public void seMarier () {
-			service.seMarier(personne.getIdPersonne(), personne.getIdPersonne());
+			service.seMarier(personne.getIdPersonne(), personne2.getIdPersonne());
+			service.seMarier(personne2.getIdPersonne(), personne.getIdPersonne());
 		}
 		
 		

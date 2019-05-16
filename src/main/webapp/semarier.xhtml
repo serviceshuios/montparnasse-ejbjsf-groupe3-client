@@ -32,7 +32,7 @@
             
             <h2>Choisissez votre âme soeur</h2>
             <h:outputLabel value="Personne" />
-            <h:selectOneMenu value="#{personneBean.personne.idPersonne}">
+            <h:selectOneMenu value="#{personneBean.personne2.idPersonne}">
                 <f:selectItem itemValue="0" itemLabel="Attribuez une personne"/>
                 <f:selectItems value="#{personneBean.findAllPersonne()}" var="p2" itemValue="#{p2.idPersonne}" itemLabel="#{p2.nom},#{p2.prenom},#{p2.age}"/>
             </h:selectOneMenu><br/>
